@@ -1,0 +1,17 @@
+[
+	{
+		"iGroupId" : 1,
+		"vGroup" : "Super Administrator",
+		"eStatus" : "Active"
+	},
+	{
+		"iGroupId" : 2,
+		"vGroup" : "Dispatcher Admin",
+		"eStatus" : "Active"
+	},
+	{
+		"iGroupId" : 3,
+		"vGroup" : "Billing Admin",
+		"eStatus" : "Active"
+	}
+]

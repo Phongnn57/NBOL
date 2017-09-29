@@ -1,0 +1,68 @@
+[
+	{
+		"iAdminId" : 1,
+		"iGroupId" : 1,
+		"vFirstName" : "Quản trị",
+		"vLastName" : "Viên",
+		"vEmail" : "noibaionline@gmail.com",
+		"vContactNo" : "0975678988",
+		"vPassword" : "$2y$12$ode6QIcgFIS/mHttA6CaAulT5vjRMoROceo9uS7xjKPYG17vQ.G9G",
+		"eStatus" : "Active",
+		"eDefault" : "Yes"
+	},
+	{
+		"iAdminId" : 7,
+		"iGroupId" : 2,
+		"vFirstName" : "Hoang Test",
+		"vLastName" : "PhanVan",
+		"vEmail" : "keke@Gmail.com",
+		"vContactNo" : "0916104234",
+		"vPassword" : "$2y$12$kYm9pInN8pOu6nPpbfp6M.LZr/sr7FGpd9rgezWk3R9cjoLy7.mGS",
+		"eStatus" : "Active",
+		"eDefault" : "No"
+	},
+	{
+		"iAdminId" : 3,
+		"iGroupId" : 3,
+		"vFirstName" : "Kế",
+		"vLastName" : "Toán",
+		"vEmail" : "noibaionline3@gmail.com",
+		"vContactNo" : "0975678988",
+		"vPassword" : "$2y$12$ikXuoxNKVFiINIwugI.jF.442HTJVzjPtCoZ71jso.yCeJep29.Hy",
+		"eStatus" : "Active",
+		"eDefault" : "No"
+	},
+	{
+		"iAdminId" : 4,
+		"iGroupId" : 2,
+		"vFirstName" : "Tổng Đài",
+		"vLastName" : "Viên",
+		"vEmail" : "noibaionline2@gmail.com",
+		"vContactNo" : "0975678988",
+		"vPassword" : "$2y$12$8uVZRgSzCLUugM7NCpfSiuyLN.RTbAcPra5L4gbkTxzFCb92bQGW2",
+		"eStatus" : "Active",
+		"eDefault" : "Yes"
+	},
+	{
+		"iAdminId" : 8,
+		"iGroupId" : 1,
+		"vFirstName" : "e111",
+		"vLastName" : "q2321321",
+		"vEmail" : "asdsad@gmail.com",
+		"vContactNo" : "09836366866",
+		"vPassword" : "$2y$12$YVz/riut2/3orG16MWX4pOWVE66T/ACe0yA8i7rAQijJnqNldX/QS",
+		"eStatus" : "Deleted",
+		"eDefault" : "No"
+	},
+	{
+		"iAdminId" : 9,
+		"iGroupId" : 1,
+		"vFirstName" : "ádas",
+		"vLastName" : "dsad",
+		"vEmail" : "abc@gmail.com",
+		"vContactNo" : "121321321321",
+		"vPassword" : "$2y$12$tusuGp9ooCRXmghwHo1KjuAOk5Y9QuamebBdlkG3Wv4Law.e7Zp3e",
+		"eStatus" : "Deleted",
+		"eDefault" : "No"
+	}
+]

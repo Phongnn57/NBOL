@@ -1,0 +1,98 @@
+<h1 class="page-title"> Thêm mới quản trị viên</h1>
+
+<div class="portlet light portlet-fit portlet-form bordered">
+    <div class="portlet-body">
+        <!-- BEGIN FORM-->
+        <form action="#" id="form_sample_3" class="form-horizontal">
+            <div class="form-body">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> Vui lòng điền đầy đủ thông tin </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Thành công </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Tên
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input type="first_name" name="first_name" class="form-control" placeholder="Nhập tên"> </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Họ
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <input type="last_name" name="last_name" class="form-control" placeholder="Nhập họ"> </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Email
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input type="email" name="email" class="form-control" placeholder="Nhập email"> </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Mật khẩu
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu"> </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Số điện thoại
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input type="phone" name="phone" class="form-control" placeholder="Nhập SĐT"> </div>
+                    </div>
+                </div>
+                <div class="form-group last">
+                    <label class="control-label col-md-3">Vai trò
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-4">
+                        <select class="form-control select2me" name="options2">
+                            <option value="">Chọn...</option>
+                            {{# each roles}}
+                            <option value="{{this._id}}">{{this.group_name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button type="submit" class="btn green">Thêm</button>
+                        <button type="button" class="btn default">Huỷ</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+    <!-- END VALIDATION STATES-->
+</div>
