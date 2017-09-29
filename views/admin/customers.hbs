@@ -1,1 +1,168 @@
-<h1>Khach hang</h1>
+<h1 class="page-title"> Khách hàng</h1>
+
+<div class="table-toolbar">
+  <div class="btn-group pull-right">
+    <a class="btn btn-circle sbold blue" data-toggle="modal" href="#responsive"> Thêm quản trị viên <i class="fa fa-plus"></i></a>
+  </div>
+</div>
+
+<div class="portlet box green">
+  <div class="portlet-title">
+    <div class="caption">
+      <i class="fa fa-cogs"></i> Danh sách khách hàng
+    </div>
+    <div class="actions">
+      <a class="btn btn-circle btn-icon-only btn-default blue fullscreen" href="#"> </a>
+      <a class="btn btn-circle btn-icon-only btn-success blue" href="#">
+                                                    <i class="icon-printer"></i>
+                                                </a>
+    </div>
+  </div>
+  <div class="portlet-body">
+
+    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+      <thead>
+        <tr>
+          <th>
+            <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                          <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                          <span></span>
+                      </label>
+          </th>
+          <th> Họ tên </th>
+          <th> Email </th>
+          <th> Ngày đăng ký </th>
+          <th> Điện thoại </th>
+          <th> Trạng thái </th>
+          <th> Thao tác </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{# each users}}
+          <tr class="odd gradeX">
+            <td>
+              <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                          <input type="checkbox" class="checkboxes" {{#compare this.default '==' true}}disabled{{/compare}} value="1" />
+                          <span></span>
+                      </label>
+            </td>
+            <td> {{this.vName}} {{this.vLastName}} </td>
+            <td>
+              <a href="mailto:{{this.vEmail}}"> {{this.vEmail}} </a>
+            </td>
+            <td>
+              {{this.tRegistrationDate}}
+            </td>
+            <td class="center"> {{this.vPhone}}</td>
+            <td class="center">
+              {{this.eStatus}}
+            </td>
+            <td>
+              <div class="btn-group">
+                <a class="btn btn-circle btn-icon-only red" href="#" data-toggle="dropdown">
+                                                                                <i class="icon-settings"></i>
+                                                                            </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="javascript:;">
+                                                                                        <i class="fa fa-pencil"></i> Sửa </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                                                                                        <i class="fa fa-trash-o"></i> Xoá </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                                                                                        <i class="fa fa-ban"></i> Huỷ kích hoạt </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                                                                                        <i class="icon-like"></i> Kích hoạt </a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- tao moi ban quan tri -->
+
+<div id="responsive" class="modal fade" tabindex="-1" data-width="760">
+  <div class="modal-header">
+    <button ng-click="close()" type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+    <h4 class="modal-title">Thêm mới tài khoản</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="form-group col-xs-12 col-md-6">
+          <label class="control-label">Tên
+              <span class="required"> * </span>
+          </label>
+          <div class="input-group">
+              <span class="input-group-addon">
+                  <i class="fa fa-user"></i>
+              </span>
+              <input type="first_name" name="first_name" class="form-control" placeholder="Nhập tên"> </div>
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+          <label class="control-label">Họ
+              <span class="required"> * </span>
+          </label>
+          <div class="input-group">
+              <span class="input-group-addon">
+                  <i class="fa fa-user"></i>
+              </span>
+              <input type="last_name" name="last_name" class="form-control" placeholder="Nhập họ"> </div>
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+          <label class="control-label">Email
+              <span class="required"> * </span>
+          </label>
+          <div class="input-group">
+              <span class="input-group-addon">
+                  <i class="fa fa-envelope"></i>
+              </span>
+              <input type="email" name="email" class="form-control" placeholder="Nhập email"> </div>
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+          <label class="control-label">Mật khẩu
+              <span class="required"> * </span>
+          </label>
+          <div class="input-group">
+              <span class="input-group-addon">
+                  <i class="fa fa-lock"></i>
+              </span>
+              <input type="password" name="password" class="form-control" placeholder="Mật khẩu"> </div>
+      </div>
+      <div class="form-group col-xs-12 col-md-6">
+          <label class="control-label">Số điện thoại
+              <span class="required"> * </span>
+          </label>
+          <div class="input-group">
+              <span class="input-group-addon">
+                  <i class="fa fa-phone"></i>
+              </span>
+              <input type="phone" name="phone" class="form-control" placeholder="SĐT"> </div>
+      </div>
+      <div class="form-group col-xs-12 col-md-6 last">
+          <label class="control-label">Vai trò
+              <span class="required"> * </span>
+          </label>
+          <select class="form-control select2me" name="options2">
+              <option value="">Chọn...</option>
+              {{# each roles}}
+              <option value="{{this._id}}">{{this.group_name}}</option>
+              {{/each}}
+          </select>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-outline dark">HUỶ</button>
+    <button type="button" class="btn green">THÊM</button>
+  </div>
+</div>

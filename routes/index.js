@@ -3,6 +3,9 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Admin = require('../models/administrators');
 var AdminGroup = require('../models/admin-groups')
+var User = require('../models/register-user');
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -67,7 +70,11 @@ router.get('/vehicle-type', function(req, res, next) {
 });
 
 router.get('/customer', function(req, res, next) {
-  res.render('admin/customers', { title: 'Khách hàng' });
+
+  User.find((err, docs) => {
+    res.render('admin/customers', { title: 'Khách hàng', users: docs });
+  });
+
 });
 
 router.get('/booking', function(req, res, next) {
